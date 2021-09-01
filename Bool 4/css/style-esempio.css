@@ -1,0 +1,64 @@
+body{
+    background-color: lightgrey;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+.item{
+    width: 300px;
+    height: 372px;
+/*  le immagini non possono avere altezza e larghezza specificata altrimenti si stretcha*/
+    position: relative;
+    display: inline-block;
+}
+
+.row{
+    margin-top: 10px;
+}
+
+.row.item > img{
+    width: 100%;
+}
+
+#special-item{
+    background-image: url('../immagini/Photo-700x700px.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.item > .sconto{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.sconto.green{
+    background-color: green;
+}
+
+.sconto.red{
+    background-color: red;
+}
+
+.cassetto{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 25px;
+    color: red;
+    display: none;
+}
+
+.item:hover .cassetto{
+    display: block;
+}
